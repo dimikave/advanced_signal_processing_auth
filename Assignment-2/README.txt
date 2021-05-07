@@ -1,5 +1,5 @@
 -----------
-Exersice 2 of Advanced Signal Processing Techniques
+Exersice 2 of Advanced Signal Processing 
 -----------
 
 - lagwind.m , toep.m and bisp3cum.m are functions related to each other

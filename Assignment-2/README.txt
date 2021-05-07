@@ -2,6 +2,10 @@
 Exersice 2 of Advanced Signal Processing 
 -----------
 
+Description:
+
+Introduction to HOS / Bispectrum / Direct and Indirect methods / Windows (Rectangular + Parzen)
+
 - lagwind.m , toep.m and bisp3cum.m are functions related to each other
   so bisp3cum.m can estimate the bispectrum and the third order cumulant
 - bispeciV2.m is a copy of bispeci.m function of HOSA Toolbox, with window

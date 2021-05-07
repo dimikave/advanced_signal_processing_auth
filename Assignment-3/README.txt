@@ -2,7 +2,11 @@
 Exercise 3
 ----------
 
+Desctription:
+
 Validity Check of Giannakis' Formula
+
+Files:
 
 - bisp3cum.m , toep.m, lagwind.m used to estimate cumulants
 

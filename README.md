@@ -15,3 +15,12 @@ Homework assignments for Advanced Signal Processing Course / Aristotle Universit
 ### Desctription:
 
 - Validity Check of Giannakis' Formula based on NRMSEs -vs- SNR diagrams (for estimation, sub-estimation and sup-estimation)
+
+## Part 4
+### Description
+
+- CEPSTRUM via HOMOMORPHIC FILTERING
+- Acquire voice samples making the five vowel sounds
+- Compute the cepstrum with different methods
+- Lifter the cepstrum domain signals
+- Try to synthesize back the voiced signals in the following way: ![image](https://user-images.githubusercontent.com/22781150/117850417-f118cf80-b28d-11eb-8de3-b736f5d02a7a.png)

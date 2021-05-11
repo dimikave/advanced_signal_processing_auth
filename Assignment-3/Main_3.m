@@ -113,8 +113,8 @@ H = zeros(q+1,1);
 
 % Choose 131072 for showing accuracy, 2048 to show the non practical aspect
 % of the method:
-length8 = 131072;
-% length8 = 2048;
+% length8 = 131072;
+length8 = 2048;
 
 if length8 == 131072
     disp('Approximate time of waiting: 45 sec')
@@ -185,14 +185,9 @@ meanNRMSEsup = meanNRMSEsup/n;
 % Confidence interval of mean NRMSEs:
 
 % Critical values
-lowCI = -1.96/sqrt(length(meanNRMSEs));         
-upCI = 1.96/sqrt(length(meanNRMSEs));
-
-lowCIsub = -1.96/sqrt(length(meanNRMSEsub));
-upCIsub = 1.96/sqrt(length(meanNRMSEsub));
-
-lowCIsup = -1.96/sqrt(length(meanNRMSEsup));
-upCIsup = 1.96/sqrt(length(meanNRMSEsup));
+a = 0.05;
+% cv = [-1.96 1.96]; 
+cv = tinv([a/2  1-a/2],length(meanNRMSEs)-1);
 
 % Standard error
 SE = std(meanNRMSEs)/sqrt(length(meanNRMSEs));
@@ -200,49 +195,54 @@ SEsub = std(meanNRMSEsub)/sqrt(length(meanNRMSEsub));
 SEsup = std(meanNRMSEsup)/sqrt(length(meanNRMSEsup));
 
 % Lower and upper bounds
-lowNRMSE = SE*lowCI;
-upNRMSE = SE*upCI;
+CI = meanNRMSEs + SE*cv;
 
-lowNRMSEsub = SEsub*lowCIsub;
-upNRMSEsub = SEsub*upCIsub;
+CIsub = meanNRMSEsub + SEsub*cv;
 
-lowNRMSEsup = SEsup*lowCIsup;
-upNRMSEsup = SEsup*upCIsup;
+CIsup = meanNRMSEsup + SEsup*cv;
 
 % Plot mean NRMSEs 
 figure()
+subplot(3,1,1)
 plot(snr,meanNRMSEs)
+% plotstd(snr,meanNRMSEs,std(meanNRMSEs))
 ylim([0 1])
 xlabel('SNR [dB]')
 ylabel('NRMSE')
 title('Mean NRMSE vs SNR')
 hold on
-plot(snr,meanNRMSEs+lowNRMSE,'r--')
-plot(snr,meanNRMSEs+upNRMSE,'g--')
+plot(snr,CI(:,1),'r--')
+plot(snr,CI(:,2),'g--')
 legend('Mean NRMSEs','CI lower bound','CI upper bound')
 
 % Plot mean NRMSEs for sub estimation
-figure()
+subplot(3,1,2)
+%figure()
 plot(snr,meanNRMSEsub)
+% plotstd(snr,meanNRMSEsub,std(meanNRMSEsub))
 ylim([0 1])
 xlabel('SNR [dB]')
 ylabel('NRMSE')
 title('Mean NRMSE of subestimation vs SNR')
 hold on
-plot(snr,meanNRMSEsub+lowNRMSEsub,'r--')
-plot(snr,meanNRMSEsub+upNRMSEsub,'g--')
+plot(snr,CIsub(:,1),'r--')
+plot(snr,CIsub(:,2),'g--')
 legend('Mean NRMSEs','CI lower bound','CI upper bound')
 
 % Plot mean NRMSEs for sup estimation
-figure()
+subplot(3,1,3)
+%figure()
 plot(snr,meanNRMSEsup)
+% plotstd(snr,meanNRMSEsup,std(meanNRMSEsup))
 ylim([0 1])
 xlabel('SNR [dB]')
 ylabel('NRMSE')
 title('Mean NRMSE of supestimation vs SNR')
 hold on
-plot(snr,meanNRMSEsup+lowNRMSEsup,'r--')
-plot(snr,meanNRMSEsup+upNRMSEsup,'g--')
+plot(snr,CIsup(:,1),'r--')
+plot(snr,CIsup(:,2),'g--')
 legend('Mean NRMSEs','CI lower bound','CI upper bound')
 
+
 toc                                     % Stop clock
+%% ------------------------ End of 3rd Assignment -------------------------

@@ -24,3 +24,10 @@ Homework assignments for Advanced Signal Processing Course / Aristotle Universit
 - Compute the cepstrum with different methods
 - Lifter the cepstrum domain signals
 - Try to synthesize back the voiced signals in the following way: ![image](https://user-images.githubusercontent.com/22781150/117850417-f118cf80-b28d-11eb-8de3-b736f5d02a7a.png)
+
+## Status of the project
+There are more projects expected to come, this repo is active.
+
+## Support - Contact
+Reach out to me:
+- dimitris.kave@gmail.com

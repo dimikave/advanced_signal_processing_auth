@@ -28,6 +28,9 @@ Homework assignments for Advanced Signal Processing Course / Aristotle Universit
 ## Status
 There are more projects expected to come, this repo is active.
 
+## Code
+MATLAB R2018a version. Using a different version, you may need to customize some commands.
+
 ## Support - Contact
 Reach out to me:
 - dimitris.kave@gmail.com

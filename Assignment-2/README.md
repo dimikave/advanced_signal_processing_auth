@@ -1,8 +1,8 @@
 -----------
-Exersice 2 of Advanced Signal Processing 
+# Exersice 2 
 -----------
 
-Description:
+## Description:
 
 Introduction to HOS / Bispectrum / Direct and Indirect methods / Windows (Rectangular + Parzen)
 
@@ -14,7 +14,9 @@ Introduction to HOS / Bispectrum / Direct and Indirect methods / Windows (Rectan
   for the exersice
 - bspecPlotInfo.m, bspecPlotInfo2 are programs to run
   some additional plot information according to the area we want
-Note: It is taken for granted that people with access to this files have
-      HOSA Toolbox for Matlab in their devices added to their PATH.
+  
+## Note
+ It is taken for granted that people with access to this files have
+  HOSA Toolbox for Matlab in their devices added to their PATH.
 
-Dimitrios Kavelidis Frantzis 					4/20/2021
+Kavelidis Frantzis Dimitris 					4/20/2021

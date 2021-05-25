@@ -30,5 +30,6 @@ Validity Check of Giannakis' Formula
 
 - Assignment3_Kavelidis.pdf is the report for the assignment
 
-## Note: It is taken for granted that people with access to this files have
+## Note
+ It is taken for granted that people with access to this files have
   HOSA Toolbox for Matlab in their devices added to their PATH.

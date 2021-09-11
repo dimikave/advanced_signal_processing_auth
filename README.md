@@ -26,7 +26,7 @@ Homework assignments for Advanced Signal Processing Course / Aristotle Universit
 - Try to synthesize back the voiced signals in the following way: ![image](https://user-images.githubusercontent.com/22781150/117850417-f118cf80-b28d-11eb-8de3-b736f5d02a7a.png)
 
 ## Status
-There are more projects expected to come, this repo is active.
+As of the completion of the project, it will probably be modified in case of more research in the field, but in any case it will not be maintained. It may hold inaccuracies and could be implemented in more efficient ways regarding speed and recources management.
 
 ## Code
 MATLAB R2018a version. Using a different version, you may need to customize some commands.
